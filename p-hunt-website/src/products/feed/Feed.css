@@ -1,0 +1,77 @@
+.mainFeedContainer{
+    height: 600px;
+    width: 45%;
+    border: 1px solid red;
+    margin-left: 15%;
+}
+.feedContainerMainHeadingDiv{
+    height: 60px;
+    width: 100%;
+    border: 1px solid green;
+}
+.feedContainer_MainHeading{
+    font-weight: 550;
+    color: #21293C;
+    font-size: 24px;
+}
+.feedContainerFeaturedDropDownDiv{
+    height: 50px;
+    width: 100%;
+    border: 1px solid greenyellow;
+}
+.feedContainerFeatureButton{
+    width: 17%;
+    height: 30px;
+    align-items: center;
+    text-align: center;
+    background-color: #EEF2FF;
+    color: #005EF6;
+    font-weight: 600;
+    font-size: 14px;
+    border-radius: 12px;
+    padding-top: 1px;
+    border: none;
+    outline:none;
+    cursor: pointer;
+}
+
+.feature_dropdown_icon{
+    margin-bottom: -6px !important;
+    align-items: center;
+    display: none;
+}
+.feedContainerFeatureMenu li{
+    display: none;
+    position: absolute;
+}
+
+.feedContainerProductsDiv{
+    height: 120px;
+    width: 100%;
+    border: 1px solid rgb(243, 207, 5);
+    display: flex;
+}
+.feedContainerProduct-detailDiv{
+   height: 90px;
+   width: 78%;
+   border: 1px solid rgb(238, 5, 199);
+   display: flex;
+}
+.feedContainerProduct-voteDiv{
+    height: 65px;
+    width: 9%;
+    margin-left: 6%;
+    border: 1px solid rgb(48, 1, 40);
+    border-radius: 5px;
+}
+.product-logo{
+    height: 90px;
+    width: 18%;
+    border: 1px solid rgb(164, 6, 255);
+}
+.product-detailDiv{
+    height: 90px;
+    width: 74%;
+    border: 1px solid rgb(59, 0, 94);
+    margin-left: 4%;
+}
