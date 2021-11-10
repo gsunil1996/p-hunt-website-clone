@@ -1,3 +1,6 @@
 .productPageMainContainer{
     display: flex;
 }
+.hr{
+    margin-left: 2%;
+}

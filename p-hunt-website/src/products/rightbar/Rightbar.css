@@ -4,3 +4,16 @@
     border: 1px solid blue;
     margin-left: 3%;
 }
+.rightbarImgDiv{
+    height: 300px;
+    width: 100%;
+    border: 1px solid black;
+}
+.rightbarImg{
+    height: 300px;
+    width: 100%;
+}
+.rightbarHr{
+    margin-top: 30px;
+    color: #667190;
+}

@@ -7,6 +7,7 @@ export default function HomeProduct() {
         <>
         <div className="productPageMainContainer">
             <Feed/>
+            <hr className="hr"/>
             <Rightbar/>
         </div>
         </>
