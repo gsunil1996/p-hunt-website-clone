@@ -1,6 +1,110 @@
+import styles from "./community.module.css";
+
 export const Community = () => {
     return (
         <>
+            {/* top section  div details */}
+            <div className={styles.TopParentContainer}>
+                <div className={styles.topLeft}>
+                    <div className={styles.topLeftHeading}>
+                        <p>Learn and engage with the Product Hunt community</p>
+                    </div>
+                    <div className={styles.topLeftDescription}>
+                        Before joining or starting a discussion remember to always be civil.
+                        Treat others with respect. Do not use the discussions board for
+                        direct sales or self-promotion. You are free to share your products
+                        and product ideas for feedback. 🙌
+                    </div>
+                    <div>
+                        <button>New discussion</button>
+                    </div>
+                </div>
+                <div className={styles.topRight}>
+                    <img src="./CommunityPageImages/coverImageFirstBlock2.png" alt="" />
+                </div>
+            </div>
+
+            {/* community and bottom  section div  */}
+            <div className={styles.layoutContainer}>
+                {/*left section-  community and search and filters sections */}
+                <div className={styles.leftmainContainer}>
+                    {/* filters and search bar */}
+                    <div className={styles.filtersContainers}>
+                        <div className={styles.applyFilters}>
+                            <div className={styles.filterSearch}>
+                                <button>
+                                    <div className={styles.filterKeysfirst}>New</div>
+                                </button>
+                                <button>
+                                    <div className={styles.filterKeysSecond}>Popular</div>
+                                </button>
+                            </div>
+                            <a href="h">
+                                <div>
+                                    <div>week</div>
+                                    <svg viewBox="0 0 9 6" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M1.556 0L0 1.556 4.444 6 8.89 1.556 7.334 0l-2.89 2.889z"></path>
+                                    </svg>
+                                </div>
+                            </a>
+                        </div>
+                        <div className={styles.searchBoxContainer}>
+                            <svg
+                                width="16"
+                                height="16"
+                                viewBox="0 0 16 16"
+                                xmlns="http://www.w3.org/2000/svg"
+                            >
+                                <path d="M7 14c-3.86 0-7-3.14-7-7s3.14-7 7-7 7 3.14 7 7-3.14 7-7 7zM7 2C4.243 2 2 4.243 2 7s2.243 5 5 5 5-2.243 5-5-2.243-5-5-5zm8.707 12.293L13.314 11.9a8.019 8.019 0 01-1.414 1.414l2.393 2.393a.997.997 0 001.414 0 .999.999 0 000-1.414z"></path>
+                            </svg>
+                            <input type="text" placeholder="Search Discussions" />
+                        </div>
+                    </div>
+
+                    {/* community feed section */}
+                    <div>
+                        <div className={styles.eachItemDetail}>
+                            {/* user image */}
+                            <div className={styles.userImageWrapper}>
+                                <div>
+                                    <div>
+                                        <a href="a" className={styles.userImageAncleTab}>
+                                            <div>
+                                                <div>
+                                                    <img src="./CommunityPageImages/dummyUserImages.jpg" alt="" className={ styles.userAvatarCommunity}/>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            {/* votes */}
+                            <button className={styles.votesButton}>
+                                <div className={styles.buttonDetailWrapper}>
+                                    <div className={styles.upperArrowImage}></div>
+                                    <div className={styles.votesCountContainer}>52</div>
+                                </div>
+                            </button>
+                            {/* details */}
+                            <div>
+                                <button className={styles.titleContainer}>
+                                    <div className={styles.titleDivContainer}>
+                                        <span  className={styles.titleSpanContainer}>I'm Jeff, co-founder of Axie Infinity which made over $1B revenue. AMA 👇</span>
+                                    </div>
+                                </button>
+                                {/* contact details and comments */}
+                                <div className={styles.detailsDivContainer}>
+                                    <div>Jefferey Zirlin </div>
+                                    <div>41 replies</div>
+                                    <div> 1d ago</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {/*right section -  search and filter by given options - topics */}
+                <div className={styles.rightmainContainer}></div>
+            </div>
         </>
-    )
-}
+    );
+};

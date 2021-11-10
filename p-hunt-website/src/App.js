@@ -13,7 +13,7 @@ function App() {
       setOffset(window.pageYOffset)
     }
   }, []);
-  console.log(offset);
+  // console.log(offset);
   // -----------------------------------
 
   return (
