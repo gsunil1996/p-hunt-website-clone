@@ -1,13 +1,21 @@
 import React from "react";
 import "./Feed.css";
-import {useState,useEffect} from "react";
+import {useState} from "react";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import ModeCommentIcon from '@mui/icons-material/ModeComment';
 import ArrowDropUpIcon from '@mui/icons-material/ArrowDropUp';
-import { Hidden  } from "@mui/material";
+import {Products} from "../../dummyData";
 
-export default function Feed() {
+const pro = Products.map((p)=>{
+  return p;
+});
+//console.log(product)
+
+export default function Feed(pro) {
     const [click,setClick] = useState("none");
+
+    const [voted,setvoted] = useState(pro.votes);
+    const [isVoted,setisVoted] = useState(false);
 
     const handleClickMenu=()=>{
       if(click==="none"){
@@ -17,17 +25,22 @@ export default function Feed() {
         setClick("none")
       }
 
-    }
+    };
+
+    const voteHandler =()=>{
+      setvoted(isVoted ? voted-1 : voted+1)
+      setisVoted(!isVoted)
+    };
   
   return (
     <>
-      <div className="mainFeedContainer" onClick={()=>handleClickMenu()}>
+      <div className="mainFeedContainer" >
         <div className="feedContainerMainHeadingDiv">
           <span className="feedContainer_MainHeading">
             Your next favorite thing👇
           </span>
         </div>
-        <div className="feedContainerFeaturedDropDownDiv">
+        <div className="feedContainerFeaturedDropDownDiv" onClick={()=>handleClickMenu()}>
           <span className="feedContainerFeature">
             <button className="feedContainerFeatureButton" onClick={()=>handleClickMenu()} >
               Featured
@@ -42,32 +55,33 @@ export default function Feed() {
           </span>
         </div>
          {/* here will come map property */}
-        <div className="feedContainerProductsDiv">
-              <div className="feedContainerProduct-detailDiv">
-                  <div className="product-logo">
-                    <video className="productLogoVideo" poster="https://ph-files.imgix.net/4ddceb91-d927-44f9-87b5-e288a9a177b8.gif?auto=compress&fm=webp&codec=mozjpeg&cs=strip&w=60&h=60&fit=max&frame=1&dpr=2">
- 
-                    </video>
-                  </div>
-                  <div className="product-detailDiv">
-                      <div className="productNameDescDiv">
-                        <h4 className="productName">Kosy</h4>
-                        <p className="productDesc">A virtual space where remote teams work and hang out in</p>
-                      </div>
-                      <div className="productCommentDiv">
-                        <ModeCommentIcon className="ModeCommentIcon"/>
-                        <p className="commentNumber">300</p>
-                        <p className="useableType">Free Options</p>
-                        <p className="dot">.</p>
-                        <p className="productType">Productivity</p>
-                      </div>
-                  </div>
-              </div>
-              <div className="feedContainerProduct-voteDiv">
-                <ArrowDropUpIcon className="ArrowDropUpIcon"/>
-                <p className="voteNumber">819</p>
-              </div>
-        </div>
+         {Products.map((p)=>(
+                   <div className="feedContainerProductsDiv">
+                   <div className="feedContainerProduct-detailDiv">
+                       <div className="product-logo">
+                         <video className="productLogoVideo" poster={p.img}></video>
+                       </div>
+                       <div className="product-detailDiv">
+                           <div className="productNameDescDiv">
+                             <h4 className="productName">{p.name}</h4>
+                             <p className="productDesc">{p.Description}</p>
+                           </div>
+                           <div className="productCommentDiv">
+                             <ModeCommentIcon className="ModeCommentIcon"/>
+                             <p className="commentNumber">{p.comment}</p>
+                             <p className="useableType">{p.monetization}</p>
+                             <p className="dot">.</p>
+                             <p className="productType">{p.Category}</p>
+                           </div>
+                       </div>
+                   </div>
+                   <div className="feedContainerProduct-voteDiv" onClick={voteHandler}>
+                     <ArrowDropUpIcon className="ArrowDropUpIcon"/>
+                     <p className="voteNumber">{p.votes}</p>
+                   </div>
+             </div>
+              
+                ))}
         
         {/* map propery --till here */}
       </div>
