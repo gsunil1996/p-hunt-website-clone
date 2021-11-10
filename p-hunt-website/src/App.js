@@ -1,23 +1,27 @@
-import logo from './logo.svg';
 import './App.css';
 
+// temporary code for navbar
+import { useEffect, useState } from "react"
+
+import { Community } from './communityPage/communityPage';
+
 function App() {
+  // temporary code for navbar
+  const [offset, setOffset] = useState(0);
+  useEffect(() => {
+    window.onscroll = () => {
+      setOffset(window.pageYOffset)
+    }
+  }, []);
+  console.log(offset);
+  // -----------------------------------
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      {/* temporary div for navbar */}
+      <div className="one" style={{ position: offset > 10 ? "fixed" : "", marginTop: offset > 10 ? "0px" : "10px" }}>Navbar code</div>
+      {/* -------------------- */}
+      <Community />
     </div>
   );
 }
