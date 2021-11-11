@@ -4,7 +4,7 @@ export function DropDown({ data }) {
   console.log(data);
   return (
     <DropDownDiv className="productDropDown">
-      {data[0] == "About us"
+      {data[0] == "About us" || data[0] == "Profile"
         ? data.map((el) => {
             return (
               <div>

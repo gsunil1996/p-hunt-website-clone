@@ -46,8 +46,7 @@ export const NavLeftDiv = styled.div`
   & .product,
   .community,
   .tools,
-  .jobs,
-  .about {
+  .jobs {
     :hover {
       & a {
         color: #da552f;
@@ -57,18 +56,70 @@ export const NavLeftDiv = styled.div`
       }
     }
   }
+  & .about {
+    :hover {
+      & a {
+        color: #da552f;
+      }
+      & .productDropDown {
+        display: block;
+
+        width: 200px;
+        & > div {
+          padding: 12px;
+          height: 20px;
+          & > h5 {
+            font-size: 15px;
+            font-weight: 500;
+          }
+        }
+      }
+    }
+  }
 `;
 export const NavRightDiv = styled.div`
   display: flex;
   justify-content: right;
   width: 50%;
-
+  .submit {
+    :hover {
+      & .productDropDown {
+        display: block;
+        width: 300px;
+        right: 10%;
+        & p {
+          margin-top: -10px;
+        }
+      }
+    }
+  }
   .profile-pic {
-    height: 40px;
-    width: 40px;
-    background-color: tomato;
+    height: 45px;
+    width: 45px;
+    cursor: pointer;
     border-radius: 50%;
     margin-left: 30px;
+    & > img {
+      height: 45px;
+      width: 45px;
+      cursor: pointer;
+      border-radius: 50%;
+    }
+    :hover {
+      & .productDropDown {
+        display: block;
+        right: 1%;
+        width: 200px;
+        & > div {
+          padding: 12px;
+          height: 20px;
+          & > h5 {
+            font-size: 15px;
+            font-weight: 500;
+          }
+        }
+      }
+    }
   }
   & > svg {
     margin-top: 15px;
