@@ -1,5 +1,5 @@
 import styles from "./community.module.css";
-import { topics,discussions,socialLinks} from "./sidebarInformation";
+import { topics, discussions, socialLinks } from "./sidebarInformation";
 
 export const Community = () => {
     return (
@@ -41,13 +41,27 @@ export const Community = () => {
                                 </button>
                             </div>
                             <a href="h">
-                                <div>
+                                <div className={styles.timeFilter}>
                                     <div>week</div>
                                     <svg viewBox="0 0 9 6" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M1.556 0L0 1.556 4.444 6 8.89 1.556 7.334 0l-2.89 2.889z"></path>
                                     </svg>
                                 </div>
+
+
                             </a>
+                            {/* timeFilters */}
+                            {/* <div >
+                                <img src="./CommunityPageImages/notchTriangle2.jpg" alt="" style={{
+                                    width: "15px", margin: "auto", marginBottom: "-1px", zIndex: "5s"
+                                }} />
+                                <div style={{ border: "1px solid", background: "#fff" }}>
+                                    <p>all</p>
+                                    <p>none</p>
+                                    <p>none</p>
+                                    <p>none</p>
+                                </div>
+                            </div> */}
                         </div>
                         <div className={styles.searchBoxContainer}>
                             <svg
@@ -116,20 +130,20 @@ export const Community = () => {
                     <div>
                         <div className={styles.headerofSection}>Topics</div>
                         {
-                            topics.map(topic=>(
-                            <div className={styles.topicsContainer}>
-                            <a href="w" className={styles.eachTopicWrapper}>
-                                <div className={styles.topicDetails}>
-                                    <div className={styles.topicAvatar}>
-                                        <img
-                                            src={`./CommunityPageImages/${topic.source}`}
-                                            alt=""
-                                        />
-                                    </div>
-                                    <div className={styles.topicNameStyle}>{topic.title}</div>
-                                </div>
-                            </a>
-                            </div>))
+                            topics.map(topic => (
+                                <div className={styles.topicsContainer}>
+                                    <a href="w" className={styles.eachTopicWrapper}>
+                                        <div className={styles.topicDetails}>
+                                            <div className={styles.topicAvatar}>
+                                                <img
+                                                    src={`./CommunityPageImages/${topic.source}`}
+                                                    alt=""
+                                                />
+                                            </div>
+                                            <div className={styles.topicNameStyle}>{topic.title}</div>
+                                        </div>
+                                    </a>
+                                </div>))
                         }
                         <hr className={styles.lineBreak} />
                     </div>
@@ -138,17 +152,17 @@ export const Community = () => {
                         <div className={styles.headerofSection}>New Discussions</div>
                         <div>
                             {
-                                discussions.map(discussion=>(
-                                <div className={styles.eachdiscussion}>
-                                    <div className={styles.newDiscussionTopic}>{discussion.title}</div>
-                                    <div className={styles.newDiscussionDetails}>
-                                        <div>
-                                            <div className={styles.smallerUpperArrow}></div>
-                                                <div className={styles.votesCountOfDiscussion}> { discussion.votes}</div>
+                                discussions.map(discussion => (
+                                    <div className={styles.eachdiscussion}>
+                                        <div className={styles.newDiscussionTopic}>{discussion.title}</div>
+                                        <div className={styles.newDiscussionDetails}>
+                                            <div>
+                                                <div className={styles.smallerUpperArrow}></div>
+                                                <div className={styles.votesCountOfDiscussion}> {discussion.votes}</div>
+                                            </div>
+                                            <div style={{ marginLeft: "16px" }}>.</div>
+                                            <div>{discussion.Comments} Comment</div>
                                         </div>
-                                        <div style={{ marginLeft: "16px" }}>.</div>
-                                            <div>{ discussion.Comments} Comment</div>
-                                    </div>
                                     </div>
                                 ))
                             }
@@ -161,14 +175,14 @@ export const Community = () => {
                             {
                                 socialLinks.map(item => (
                                     <>
-                                    <p>{item}</p>
-                                    <p>.</p>
+                                        <p>{item}</p>
+                                        <p>.</p>
                                     </>
                                 ))
                             }
                         </div>
                         <div className={styles.copywrightInformation}>@2021 PRODUCT HUNT
-                     <hr className={styles.lineBreak} />
+                            <hr className={styles.lineBreak} />
                         </div>
                     </div>
                 </div>

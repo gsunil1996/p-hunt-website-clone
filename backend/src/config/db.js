@@ -1,10 +1,11 @@
 const mongoose = require("mongoose");
-
-
-// to use mongodb we need to start database server i.e. using command mongod
+const dotenv = require("dotenv");
+dotenv.config();
 const connect = () => {
-    return mongoose.connect("mongodb://127.0.0.1:27017/productHunt")
-}
+    return mongoose.connect(process.env.MONGO_URL, {
+        useNewUrlParser: true,
+        UseUnifiedTopology: true,
+    });
+};
 
-
-module.exports = connect
+module.exports = connect;

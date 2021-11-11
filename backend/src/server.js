@@ -1,13 +1,23 @@
-const express = require("express")
-const app = express()
+const port = 2345
+const express = require("express");
+const app = express();
+const connect = require("./config/db.js");
 
-const connect = require("./config/db")
+const cors = require('cors')
+app.use(cors())
 
-const port = 4567
+const discussionController = require("./controller/communityDiscussion.controller")
+const userController = require("./controller/user.controller")
 
-app.use(express.json())
+app.use(express.json());
 
-app.listen(port, async () => {
-    await connect();
-    console.log(`listening at port ${port}`)
-})
+
+// discussion controler
+app.use("/discussion", discussionController);
+app.use("/user", userController);
+
+
+app.listen(port, async function () {
+    await connect()
+    console.log(`listning on the port ${port}`)
+});

@@ -117,7 +117,7 @@
   color: inherit;
   background: transparent;
 }
-.applyFilters a div {
+.timeFilter {
   display: flex;
   flex-direction: row;
   box-sizing: border-box;
@@ -133,6 +133,13 @@
   width: 10px;
   fill: #11698e;
   margin-left: 4px;
+}
+/* position: "absolute, display: "flex", flexDirection: "column", marginLeft: "140px", marginTop: "20px", zIndex: "10" }} */
+.timeFilterWrapper {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  margin-left: 140px;
 }
 
 .searchBoxContainer {
