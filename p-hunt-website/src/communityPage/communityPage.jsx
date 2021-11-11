@@ -1,4 +1,5 @@
 import styles from "./community.module.css";
+import { topics,discussions,socialLinks} from "./sidebarInformation";
 
 export const Community = () => {
     return (
@@ -71,7 +72,11 @@ export const Community = () => {
                                         <a href="a" className={styles.userImageAncleTab}>
                                             <div>
                                                 <div>
-                                                    <img src="./CommunityPageImages/dummyUserImages.jpg" alt="" className={ styles.userAvatarCommunity}/>
+                                                    <img
+                                                        src="./CommunityPageImages/dummyUserImages.jpg"
+                                                        alt=""
+                                                        className={styles.userAvatarCommunity}
+                                                    />
                                                 </div>
                                             </div>
                                         </a>
@@ -89,7 +94,10 @@ export const Community = () => {
                             <div>
                                 <button className={styles.titleContainer}>
                                     <div className={styles.titleDivContainer}>
-                                        <span  className={styles.titleSpanContainer}>I'm Jeff, co-founder of Axie Infinity which made over $1B revenue. AMA 👇</span>
+                                        <span className={styles.titleSpanContainer}>
+                                            I'm Jeff, co-founder of Axie Infinity which made over $1B
+                                            revenue. AMA 👇
+                                        </span>
                                     </div>
                                 </button>
                                 {/* contact details and comments */}
@@ -103,7 +111,67 @@ export const Community = () => {
                     </div>
                 </div>
                 {/*right section -  search and filter by given options - topics */}
-                <div className={styles.rightmainContainer}></div>
+                <div className={styles.rightmainContainer}>
+                    {/* topics */}
+                    <div>
+                        <div className={styles.headerofSection}>Topics</div>
+                        {
+                            topics.map(topic=>(
+                            <div className={styles.topicsContainer}>
+                            <a href="w" className={styles.eachTopicWrapper}>
+                                <div className={styles.topicDetails}>
+                                    <div className={styles.topicAvatar}>
+                                        <img
+                                            src={`./CommunityPageImages/${topic.source}`}
+                                            alt=""
+                                        />
+                                    </div>
+                                    <div className={styles.topicNameStyle}>{topic.title}</div>
+                                </div>
+                            </a>
+                            </div>))
+                        }
+                        <hr className={styles.lineBreak} />
+                    </div>
+                    {/* new discussions */}
+                    <div>
+                        <div className={styles.headerofSection}>New Discussions</div>
+                        <div>
+                            {
+                                discussions.map(discussion=>(
+                                <div className={styles.eachdiscussion}>
+                                    <div className={styles.newDiscussionTopic}>{discussion.title}</div>
+                                    <div className={styles.newDiscussionDetails}>
+                                        <div>
+                                            <div className={styles.smallerUpperArrow}></div>
+                                                <div className={styles.votesCountOfDiscussion}> { discussion.votes}</div>
+                                        </div>
+                                        <div style={{ marginLeft: "16px" }}>.</div>
+                                            <div>{ discussion.Comments} Comment</div>
+                                    </div>
+                                    </div>
+                                ))
+                            }
+                        </div>
+                        <hr className={styles.lineBreak} />
+                    </div>
+                    {/* other links */}
+                    <div>
+                        <div className={styles.otherLinksWraper}>
+                            {
+                                socialLinks.map(item => (
+                                    <>
+                                    <p>{item}</p>
+                                    <p>.</p>
+                                    </>
+                                ))
+                            }
+                        </div>
+                        <div className={styles.copywrightInformation}>@2021 PRODUCT HUNT
+                     <hr className={styles.lineBreak} />
+                        </div>
+                    </div>
+                </div>
             </div>
         </>
     );

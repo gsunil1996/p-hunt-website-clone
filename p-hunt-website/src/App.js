@@ -19,7 +19,7 @@ function App() {
   return (
     <div>
       {/* temporary div for navbar */}
-      <div className="one" style={{ position: offset > 10 ? "fixed" : "", marginTop: offset > 10 ? "0px" : "10px" }}>Navbar code</div>
+      <div className="one" style={{ position: offset > 0 ? "fixed" : "", transition: "ease-in" }}>Navbar code</div>
       {/* -------------------- */}
       <Community />
     </div>

@@ -52,12 +52,12 @@
 
 /* community and bottom  section div   */
 .layoutContainer {
-  border: 1px solid red;
+  /* border: 1px solid red; */
   max-width: 988px;
   box-sizing: border-box;
   display: flex;
   flex-direction: row;
-  margin: 0 auto;
+  margin: 25px auto;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial,
     sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
   -webkit-font-smoothing: antialiased;
@@ -172,7 +172,7 @@
 .rightmainContainer {
   height: 200px;
   width: 280px;
-  border: 1px solid blue;
+  /* border: 1px solid blue; */
   margin-left: 56px;
 }
 .userImageWrapper {
@@ -282,6 +282,124 @@
 .detailsDivContainer div:nth-child(3) {
   margin-left: 16px;
   cursor: pointer;
+}
+/* right side div */
+.rightmainContainer {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial,
+    sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
+  -webkit-font-smoothing: antialiased;
+}
+.headerofSection {
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 20px;
+  color: #4b587c;
+  margin-bottom: 24px;
+}
+.topicsContainer {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  flex: 1;
+}
+.eachTopicWrapper {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #21293c;
+  text-decoration: none;
+  background: transparent;
+  cursor: pointer;
+}
+.topicDetails {
+  display: flex;
+  flex-direction: row;
+  box-sizing: border-box;
+}
+
+.topicAvatar img {
+  width: 36px;
+  height: 36px;
+  border-radius: 5px;
+  vertical-align: bottom;
+  border: none;
+}
+.topicNameStyle {
+  margin-top: 5px;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  margin-left: 16px;
+}
+.lineBreak {
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+.eachdiscussion {
+  display: flex;
+  flex-direction: column;
+  margin: 20px 0;
+  padding: 0%;
+}
+.newDiscussionTopic {
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 24px;
+  color: #21293c;
+  cursor: pointer;
+}
+.newDiscussionDetails,
+.newDiscussionDetails div:nth-child(1) {
+  display: flex;
+  flex-direction: row;
+  color: #21293c;
+  font-size: 12px;
+  line-height: 20px;
+}
+.smallerUpperArrow {
+  background-image: url("https://ph-static.imgix.net/upvote-burst-light-grey-v6.png?auto=compress&format=auto");
+  width: 28px;
+  height: 26px;
+  background-position: 0;
+  background-repeat: no-repeat;
+  background-size: 2900%;
+  cursor: pointer;
+}
+.votesCountOfDiscussion {
+  margin-top: 2px;
+  cursor: pointer;
+}
+
+.newDiscussionDetails div:nth-child(3) {
+  margin-top: 2px;
+  margin-left: 16px;
+  cursor: pointer;
+}
+.otherLinksWraper {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 0%;
+  padding: 0%;
+  font-size: 12px;
+  color: #4b587c;
+  font-weight: 400;
+}
+.otherLinksWraper p {
+  padding: 2px;
+}
+.copywrightInformation {
+  color: #4b587c;
+  font-weight: 400;
+  font-size: 10px;
+  margin-top: 10px;
+  text-transform: uppercase;
+  margin-bottom: 100px;
 }
 /* media queries */
 @media only screen and (max-width: 1170px) {
