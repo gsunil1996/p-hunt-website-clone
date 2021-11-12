@@ -1,5 +1,5 @@
 .rightbarMainContainer{
-    height: 1200px;
+    height: 1600px;
     width: 22%;
     /* border: 1px solid blue; */
     margin-left: 3%;
@@ -17,12 +17,21 @@
     margin-top: 30px;
     color: #667190;
 }
-
+.rightbarHr-3{
+    margin-top: 20px;
+    color: #667190; 
+}
 .rightbar-latestStoriesMainDiv{
     height: 350px;
     width: 100%;
     /* border: 1px solid rgb(255, 4, 171); */
     margin-top: 20px;
+}
+.rightbar-latestStoriesMainDiv-3{
+    height: 350px;
+    width: 100%;
+    /* border: 1px solid rgb(255, 4, 171); */
+    margin-top: -70px;
 }
 .latestStories{
     font-size: 12px;
@@ -71,4 +80,32 @@
     /* border: 1px solid black; */
     height: 60px;
     cursor: pointer;
+}
+.rightbar-footerDiv{
+    height: 100px;
+    width: 100%;
+    /* border: 1px solid black; */
+    margin-top: 22px;
+}
+.rightbar-footer-childdiv{
+    height: 18px;
+    width: 100%;
+    /* border: 1px solid black; */
+    display: flex;
+    cursor: pointer;
+}
+.rightbar-footer-childdiv p{
+    font-size: 12px;
+    color: #4b587C;
+}
+.rightbar-footer-childdiv-tradmark{
+    height: 18px;
+    width: 100%;
+    /* border: 1px solid black; */
+    display: flex;
+    margin-top: 8px;
+}
+.tradmark{
+    font-size: 12px;
+    color: #4b587C;
 }

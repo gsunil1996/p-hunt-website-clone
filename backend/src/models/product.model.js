@@ -16,7 +16,12 @@ const ProductSchema = new mongoose.Schema(
         },
         img:{
             type:String,
+            required:true,
   
+        },
+        name:{
+            type:String,
+            required:true
         },
         comment :{
             type:Array,

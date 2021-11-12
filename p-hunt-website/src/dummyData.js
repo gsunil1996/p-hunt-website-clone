@@ -128,5 +128,65 @@ export const Products = [
       monetization:"free",
       Category:"gaming"
     },
+    {
+      id: 10,
+      Description: "Automated Insights from your Google Analytics",
+      img: "https://ph-files.imgix.net/2321425f-651e-4ea5-8a94-03040ee09edb.gif?auto=compress&fm=webp&codec=mozjpeg&cs=strip&w=80&h=80&fit=max&frame=1&dpr=2",
+      date: "09/11/21",
+      userId: 10,
+      votes: 704,
+      comment: 121,
+      name:"sofy",
+      monetization:"free",
+      Category:"gaming"
+    },
+    {
+      id: 10,
+      Description: "Automated Insights from your Google Analytics",
+      img: "https://ph-files.imgix.net/2321425f-651e-4ea5-8a94-03040ee09edb.gif?auto=compress&fm=webp&codec=mozjpeg&cs=strip&w=80&h=80&fit=max&frame=1&dpr=2",
+      date: "09/11/21",
+      userId: 10,
+      votes: 704,
+      comment: 121,
+      name:"sofy",
+      monetization:"free",
+      Category:"gaming"
+    },
+    {
+      id: 10,
+      Description: "Automated Insights from your Google Analytics",
+      img: "https://ph-files.imgix.net/2321425f-651e-4ea5-8a94-03040ee09edb.gif?auto=compress&fm=webp&codec=mozjpeg&cs=strip&w=80&h=80&fit=max&frame=1&dpr=2",
+      date: "09/11/21",
+      userId: 10,
+      votes: 704,
+      comment: 121,
+      name:"sofy",
+      monetization:"free",
+      Category:"gaming"
+    },
+    {
+      id: 10,
+      Description: "Automated Insights from your Google Analytics",
+      img: "https://ph-files.imgix.net/2321425f-651e-4ea5-8a94-03040ee09edb.gif?auto=compress&fm=webp&codec=mozjpeg&cs=strip&w=80&h=80&fit=max&frame=1&dpr=2",
+      date: "09/11/21",
+      userId: 10,
+      votes: 704,
+      comment: 121,
+      name:"sofy",
+      monetization:"free",
+      Category:"gaming"
+    },
+    {
+      id: 10,
+      Description: "Automated Insights from your Google Analytics",
+      img: "https://ph-files.imgix.net/2321425f-651e-4ea5-8a94-03040ee09edb.gif?auto=compress&fm=webp&codec=mozjpeg&cs=strip&w=80&h=80&fit=max&frame=1&dpr=2",
+      date: "09/11/21",
+      userId: 10,
+      votes: 704,
+      comment: 121,
+      name:"sofy",
+      monetization:"free",
+      Category:"gaming"
+    },
   ];
 

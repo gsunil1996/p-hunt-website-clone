@@ -1,16 +1,26 @@
 const router = require("express").Router();
 const Product = require("../models/product.model");
+const upload = require("../middlewares/fileupload");
 
 //create a product
-router.post("/",async (req,res)=>{
-    const newProduct = new Product(req.body)
-    try{
-      const saveProduct = await newProduct.save();
-      res.status(200).send(saveProduct)
-    } catch(err){
-        res.status(500).send(err.message);
+router.post(
+    "/",
+    upload.single("productImage"),
+    async function (req, res) {
+      const product = await Product.create({
+        name: req.body.name,
+        Description: req.body.Description,
+        userId: req.body.userId,
+        votes: req.body.votes,
+        comment: req.body.comment,
+        monetization: req.body.monetization,
+        Category: req.body.Category,
+        link: req.body.link,
+        img: req.file.path,
+      });
+      return res.status(200).send(product);
     }
-  });
+  );
 
   // get a product
 router.get("/:id", async(req,res)=>{

@@ -74,7 +74,55 @@ export default function Rightbar() {
                     <div className="latestStories-photoDiv">
                         <img className="latestStories-photo" src=""></img>
                     </div>
-                </div><hr className="rightbarHr"/>
+                </div>
+                <hr className="rightbarHr-3"/> 
+            </div>
+            <div className="rightbar-latestStoriesMainDiv-3">
+                <h4 className="latestStories">UPCOMING PRODUCTS  →</h4>
+                <div className="rightbar-latestStories-childdiv-1">
+                    <div className="latestStories-descdiv">
+                        <p className="latestStories-desc">cool.bio Analytics</p>
+                        <p className="latestStories-time">Analytics is made easy and privacy-friendly.</p>
+                    </div>
+                    <div className="latestStories-photoDiv">
+                        <img className="latestStories-photo" src="https://ph-files.imgix.net/a5872ead-526d-4526-aaba-57acd6cfdf69.png?auto=format&auto=compress&codec=mozjpeg&cs=strip&w=40&h=40&fit=crop&bm=normal&bf=max&bh=20&bw=20"></img>
+                    </div>
+                </div>
+
+                <div className="rightbar-latestStories-childdiv-1">
+                    <div className="latestStories-descdiv">
+                        <p className="latestStories-desc">UW Studio</p>
+                        <p className="latestStories-time">Easy, fun and collaborative custom clothing</p>
+                    </div>
+                    <div className="latestStories-photoDiv">
+                        <img className="latestStories-photo" src="https://ph-files.imgix.net/73a2c7d9-2f18-49a2-8418-863c1b717ea4.jpeg?auto=format&auto=compress&codec=mozjpeg&cs=strip&w=40&h=40&fit=crop&blend=03f57753-ae1c-4953-b240-7085d056b469.png&bm=normal&bf=max&bh=20&bw=20&bg=000000&bri=-40"></img>
+                    </div>
+                </div>
+
+                <div className="rightbar-latestStories-childdiv-1">
+                    <div className="latestStories-descdiv">
+                        <p className="latestStories-desc">Legacy</p>
+                        <p className="latestStories-time">If Product Hunt & LinkedIn had a baby!</p>
+                    </div>
+                    <div className="latestStories-photoDiv">
+                        <img className="latestStories-photo" src="https://ph-files.imgix.net/a2f3d935-5c81-457e-8f06-cd0064e0d12b.png?auto=format&auto=compress&codec=mozjpeg&cs=strip&w=40&h=40&fit=crop&bm=normal&bf=max&bh=20&bw=20"></img>
+                    </div>
+                </div>
+                <hr className="rightbarHr-3"/> 
+                <div className="rightbar-footerDiv">
+                    <div className="rightbar-footer-childdiv">
+                        <p>Blog . Newsletter . Ask . Questions . Apps . About .</p>
+                    </div>
+                    <div className="rightbar-footer-childdiv">
+                    <p>FAQ . Terms . Privacy and Cookies . Twitter . </p>
+                    </div>
+                    <div className="rightbar-footer-childdiv">
+                    <p>Facebook . Instagram . Advirtise .  </p>
+                    </div>
+                    <div className="rightbar-footer-childdiv-tradmark">
+                    <p className="tradmark">© 2021 PRODUCT HUNT</p>
+                    </div>
+                </div>
             </div>
         </div>
         </>
