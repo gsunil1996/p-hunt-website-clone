@@ -9,11 +9,11 @@ export default function HomeProduct() {
     return (
         <>
         <div className="productPageMainContainer">
-            {/* <Feed/>
+            <Feed/>
             <hr className="hr"/>
-            <Rightbar/> */}
+            <Rightbar/>
             {/* <CreateProduct/> */}
-            <CreateProductForm/>
+            {/* <CreateProductForm/> */}
         </div>
         </>
     )

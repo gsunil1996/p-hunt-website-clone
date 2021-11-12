@@ -77,3 +77,94 @@
     background-color: white;
     box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
 }
+
+.createProductform-fieldsDiv{
+    height: 400px;
+    width: 80%;
+    /* border: 1px solid black; */
+    margin-left: 10%;
+    /* display: flex; */
+}
+.createProduct-fieldsDivParent{
+    height: 250px;
+    width: 100%;
+    /* border: 1px solid black; */
+    display: flex; 
+}
+.createProductform-fieldDiv-1{
+    height: 250px;
+    width: 50%;
+    /* border: 1px solid red; */
+}
+.createProductform-fieldDiv-2{
+    height: 250px;
+    width: 50%;
+    /* border: 1px solid rgb(255, 0, 221); */
+}
+.createProductform-inputFileld{
+    margin-left: 10%;
+    margin-top: 40px;
+    height: 40px;
+    width: 80%;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+    border-radius: 4px;
+    box-sizing: border-box;
+    display: inline-block;
+    border: 2px solid #DA552F;
+}
+.createProductform-inputFileld-desc{
+    margin-left: 10%;
+    margin-top: 40px;
+    height: 70px;
+    width: 80%;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+    border-radius: 4px;
+    box-sizing: border-box;
+    display: inline-block;
+    border: 2px solid #DA552F;
+}
+.createProductform-inputFileld-desc::-webkit-input-placeholder{
+    color: #9b9999;
+    margin-top: -50px;
+}
+.createProductform-inputFileld-desc:focus{
+    outline: none; 
+}
+.createProductform-inputFileld:focus{
+outline: none;
+}
+.createProductform-inputFileld::-webkit-input-placeholder{
+    color: #9b9999;
+
+}
+.createProduct-uploadImgDiv{
+    height: 20px;
+    width: 12%;
+    border: 1px solid #c4c3c3;
+    margin-left: 45%;
+    margin-top: 25px;
+    background-color: #dfdfdf;
+}
+.uploadImg-span{
+    margin-left: 45%;
+    font-size: 10px;
+}
+.FileUploadIcon{
+    color: #DA552F;
+    margin-left: 25%;
+}
+.reateProduct-submitButton{
+    text-decoration: none;
+    display: inline-block;
+    margin: 4px 2px;
+    cursor: pointer;
+    padding: 12px 15px 12px 15px;
+    text-align: center;
+    font-size: 14px;
+    margin-top: 12px;
+    border-radius: 5px;
+    border: none;
+    background-color:#F64900 ;
+    color: white;
+    margin-left: 45%;
+}

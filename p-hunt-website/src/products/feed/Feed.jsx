@@ -5,17 +5,18 @@ import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import ModeCommentIcon from '@mui/icons-material/ModeComment';
 import ArrowDropUpIcon from '@mui/icons-material/ArrowDropUp';
 import {Products} from "../../dummyData";
+import FeedProduct from "../feedProductPost.jsx/FeedProduct";
 
-const pro = Products.map((p)=>{
-  return p;
-});
+// const pro = Products.map((p)=>{
+//   return p;
+// });
 //console.log(product)
 
-export default function Feed(pro) {
+export default function Feed() {
     const [click,setClick] = useState("none");
 
-    const [voted,setvoted] = useState(pro.votes);
-    const [isVoted,setisVoted] = useState(false);
+    // const [voted,setvoted] = useState(p.votes);
+    // const [isVoted,setisVoted] = useState(false);
 
     const handleClickMenu=()=>{
       if(click==="none"){
@@ -25,12 +26,12 @@ export default function Feed(pro) {
         setClick("none")
       }
 
-    };
+     };
 
-    const voteHandler =()=>{
-      setvoted(isVoted ? voted-1 : voted+1)
-      setisVoted(!isVoted)
-    };
+    // const voteHandler =()=>{
+    //   setvoted(isVoted ? voted-1 : voted+1)
+    //   setisVoted(!isVoted)
+    // };
   
   return (
     <>
@@ -40,7 +41,7 @@ export default function Feed(pro) {
             Your next favorite thing👇
           </span>
         </div>
-        <div className="feedContainerFeaturedDropDownDiv" onClick={()=>handleClickMenu()}>
+        <div className="feedContainerFeaturedDropDownDiv"  onClick={()=>handleClickMenu()}> 
           <span className="feedContainerFeature">
             <button className="feedContainerFeatureButton" onClick={()=>handleClickMenu()} >
               Featured
@@ -50,12 +51,12 @@ export default function Feed(pro) {
               <ul>
               <p>Featured</p>
               <p>Newest</p>
-            </ul>
-              </div>
+              </ul>
+            </div>
           </span>
         </div>
          {/* here will come map property */}
-         {Products.map((p)=>(
+         {/* {Products.map((p)=>(
                    <div className="feedContainerProductsDiv">
                    <div className="feedContainerProduct-detailDiv">
                        <div className="product-logo">
@@ -75,14 +76,17 @@ export default function Feed(pro) {
                            </div>
                        </div>
                    </div>
-                   <div className="feedContainerProduct-voteDiv" onClick={voteHandler}>
+                   <div className="feedContainerProduct-voteDiv" value={voted} onClick={voteHandler}>
                      <ArrowDropUpIcon className="ArrowDropUpIcon"/>
                      <p className="voteNumber">{p.votes}</p>
                    </div>
              </div>
               
                 ))}
-        
+         */}
+         {Products.map((pro)=>(
+                    <FeedProduct key={pro.id} p={pro}/>
+                ))}
         {/* map propery --till here */}
       </div>
     </>

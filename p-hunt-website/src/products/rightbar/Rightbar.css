@@ -1,13 +1,13 @@
 .rightbarMainContainer{
-    height: 600px;
+    height: 1200px;
     width: 22%;
-    border: 1px solid blue;
+    /* border: 1px solid blue; */
     margin-left: 3%;
 }
 .rightbarImgDiv{
     height: 300px;
     width: 100%;
-    border: 1px solid black;
+    /* border: 1px solid black; */
 }
 .rightbarImg{
     height: 300px;
@@ -16,4 +16,59 @@
 .rightbarHr{
     margin-top: 30px;
     color: #667190;
+}
+
+.rightbar-latestStoriesMainDiv{
+    height: 350px;
+    width: 100%;
+    /* border: 1px solid rgb(255, 4, 171); */
+    margin-top: 20px;
+}
+.latestStories{
+    font-size: 12px;
+    color: #4B587c;
+}
+.latestStories:hover{
+    color: #fc3d08;
+}
+.rightbar-latestStories-childdiv-1{
+    height: 90px;
+    width: 100%;
+    /* border: 1px solid black; */
+    display: flex;
+    margin-top: 20px;
+    cursor: pointer;
+}
+.latestStories-descdiv{
+    height: 90px;
+    width: 70%;
+    /* border: 1px solid blue; */
+}
+.latestStories-photoDiv{
+    height: 50px;
+    width: 25%;
+    /* border: 1px solid rgb(0, 0, 0); */
+    margin-left: 5%;
+}
+.latestStories-desc{
+    font-size: 14px;
+    font-weight: 600;
+    color: #4d4f57;
+    line-height: 1.6;
+}
+.latestStories-time{
+    font-size: 12px;
+    font-weight: 400;
+    color: #7b7f88;
+    margin-top: 5px;
+}
+.latestStories-photo{
+    border-radius: 5px;
+}
+.rightbar-latestStories-childdiv-2{
+    margin-top: 15px;
+    display: flex;
+    /* border: 1px solid black; */
+    height: 60px;
+    cursor: pointer;
 }

@@ -29,7 +29,11 @@ const ProductSchema = new mongoose.Schema(
         monetization:{
             type:String,
             required:true
-        } 
+        },
+        link:{
+            type:String,
+            required:false
+        },
     },
     {timestamps:true}
     
