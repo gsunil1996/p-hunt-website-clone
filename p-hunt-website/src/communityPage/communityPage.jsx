@@ -1,11 +1,36 @@
+import { useState, useEffect } from "react";
 import styles from "./community.module.css";
 import { topics, discussions, socialLinks } from "./sidebarInformation";
+import axios from "axios"
 
 export const Community = () => {
+
+    const [discussionData, setDiscussionData] = useState([])
+    const [showTimeFilters, setTimeFilters] = useState(false)
+    const [page, setPage] = useState(1)
+
+    useEffect(() => {
+        axios({
+            method: "get",
+            mode: "no-cors",
+            url: `http://localhost:2345/discussion?page=${page}`,
+        })
+            .then(function (response) {
+                setDiscussionData([...discussionData,...response.data.data])
+            })
+            .catch(function (error) {
+                console.log(error);
+            });
+
+    },[page])
+
+
+
+    let count = 100;
     return (
         <>
             {/* top section  div details */}
-            <div className={styles.TopParentContainer}>
+            <div className={styles.TopParentContainer} onClick={() => setTimeFilters(false)}>
                 <div className={styles.topLeft}>
                     <div className={styles.topLeftHeading}>
                         <p>Learn and engage with the Product Hunt community</p>
@@ -26,7 +51,7 @@ export const Community = () => {
             </div>
 
             {/* community and bottom  section div  */}
-            <div className={styles.layoutContainer}>
+            <div className={styles.layoutContainer} onClick={() => showTimeFilters ? setTimeFilters(false) : ""} >
                 {/*left section-  community and search and filters sections */}
                 <div className={styles.leftmainContainer}>
                     {/* filters and search bar */}
@@ -40,7 +65,7 @@ export const Community = () => {
                                     <div className={styles.filterKeysSecond}>Popular</div>
                                 </button>
                             </div>
-                            <a href="h">
+                            <div className={styles.weekWrapper} onClick={() => setTimeFilters(!showTimeFilters)}>
                                 <div className={styles.timeFilter}>
                                     <div>week</div>
                                     <svg viewBox="0 0 9 6" xmlns="http://www.w3.org/2000/svg">
@@ -49,19 +74,18 @@ export const Community = () => {
                                 </div>
 
 
-                            </a>
+                            </div>
                             {/* timeFilters */}
-                            {/* <div >
-                                <img src="./CommunityPageImages/notchTriangle2.jpg" alt="" style={{
-                                    width: "15px", margin: "auto", marginBottom: "-1px", zIndex: "5s"
-                                }} />
-                                <div style={{ border: "1px solid", background: "#fff" }}>
-                                    <p>all</p>
-                                    <p>none</p>
-                                    <p>none</p>
-                                    <p>none</p>
+                            <div className={styles.timeFilterWrapperDropDown} style={{ display: showTimeFilters ? "block" : "none" }}>
+                                <img src="./CommunityPageImages/notchTriangle2.jpg" alt="" />
+                                <div >
+                                    <p>Now</p>
+                                    <p>Week</p>
+                                    <p>Month</p>
+                                    <p>Year</p>
+                                    <p>All</p>
                                 </div>
-                            </div> */}
+                            </div>
                         </div>
                         <div className={styles.searchBoxContainer}>
                             <svg
@@ -78,50 +102,55 @@ export const Community = () => {
 
                     {/* community feed section */}
                     <div>
-                        <div className={styles.eachItemDetail}>
-                            {/* user image */}
-                            <div className={styles.userImageWrapper}>
-                                <div>
-                                    <div>
-                                        <a href="a" className={styles.userImageAncleTab}>
+                        {
+                            discussionData.map(discussion => (
+
+
+                                <div className={styles.eachItemDetail} key={count++}>
+                                    {/* user image */}
+                                    <div className={styles.userImageWrapper}>
+                                        <div>
                                             <div>
-                                                <div>
-                                                    <img
-                                                        src="./CommunityPageImages/dummyUserImages.jpg"
-                                                        alt=""
-                                                        className={styles.userAvatarCommunity}
-                                                    />
-                                                </div>
+                                                <a href="a" className={styles.userImageAncleTab}>
+                                                    <div>
+                                                        <div>
+                                                            <img
+                                                                src={discussion.imageUrl}
+                                                                alt=""
+                                                                className={styles.userAvatarCommunity}
+                                                            />
+                                                        </div>
+                                                    </div>
+                                                </a>
                                             </div>
-                                        </a>
+                                        </div>
+                                    </div>
+                                    {/* votes */}
+                                    <button className={styles.votesButton}>
+                                        <div className={styles.buttonDetailWrapper}>
+                                            <div className={styles.upperArrowImage}></div>
+                                            <div className={styles.votesCountContainer}>{ discussion.votes}</div>
+                                        </div>
+                                    </button>
+                                    {/* details */}
+                                    <div>
+                                        <button className={styles.titleContainer}>
+                                            <div className={styles.titleDivContainer}>
+                                                <span className={styles.titleSpanContainer}>
+                                                    {discussion.title}
+                                                </span>
+                                            </div>
+                                        </button>
+                                        {/* contact details and comments */}
+                                        <div className={styles.detailsDivContainer}>
+                                            <div>{discussion.userName}</div>
+                                            <div>{discussion.comments} replies</div>
+                                            <div>{discussion.days}  ago</div>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            {/* votes */}
-                            <button className={styles.votesButton}>
-                                <div className={styles.buttonDetailWrapper}>
-                                    <div className={styles.upperArrowImage}></div>
-                                    <div className={styles.votesCountContainer}>52</div>
-                                </div>
-                            </button>
-                            {/* details */}
-                            <div>
-                                <button className={styles.titleContainer}>
-                                    <div className={styles.titleDivContainer}>
-                                        <span className={styles.titleSpanContainer}>
-                                            I'm Jeff, co-founder of Axie Infinity which made over $1B
-                                            revenue. AMA 👇
-                                        </span>
-                                    </div>
-                                </button>
-                                {/* contact details and comments */}
-                                <div className={styles.detailsDivContainer}>
-                                    <div>Jefferey Zirlin </div>
-                                    <div>41 replies</div>
-                                    <div> 1d ago</div>
-                                </div>
-                            </div>
-                        </div>
+                            ))
+                        }
                     </div>
                 </div>
                 {/*right section -  search and filter by given options - topics */}

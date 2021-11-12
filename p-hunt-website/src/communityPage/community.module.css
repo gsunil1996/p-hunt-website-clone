@@ -111,11 +111,12 @@
   line-height: 24px;
   color: #21293c;
 }
-.applyFilters a {
+.weekWrapper {
   margin-left: 32px;
   text-decoration: none;
   color: inherit;
   background: transparent;
+  cursor: pointer;
 }
 .timeFilter {
   display: flex;
@@ -123,25 +124,50 @@
   box-sizing: border-box;
   align-items: center;
 }
-.applyFilters a div div {
+.applyFilters .weekWrapper div div {
   font-weight: 400;
   font-size: 14px;
   line-height: 24px;
 }
-.applyFilters a div svg {
+.applyFilters .weekWrapper div svg {
   overflow: hidden;
   width: 10px;
   fill: #11698e;
+  margin-top: 4px;
   margin-left: 4px;
 }
-/* position: "absolute, display: "flex", flexDirection: "column", marginLeft: "140px", marginTop: "20px", zIndex: "10" }} */
-.timeFilterWrapper {
+
+.timeFilterWrapperDropDown {
   position: absolute;
   display: flex;
   flex-direction: column;
-  margin-left: 140px;
+  margin-left: 120px;
+  margin-top: 11px;
+  z-index: 5;
+  /* border: 1px solid; */
 }
 
+.timeFilterWrapperDropDown img {
+  /* border: 1px solid red; */
+  width: 15px;
+  margin-left: 40%;
+  margin-bottom: -5px;
+  z-index: 5;
+}
+.timeFilterWrapperDropDown div {
+  border: 1px solid rgb(218, 217, 217);
+  background-color: #fff;
+  padding: 5px;
+}
+
+.timeFilterWrapperDropDown div p {
+  padding: 5px 5px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  margin: 5px;
+  color: #21293c;
+}
 .searchBoxContainer {
   position: relative;
   width: 280px;

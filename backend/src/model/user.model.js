@@ -2,7 +2,12 @@ const mongoose = require("mongoose")
 
 const userSchema = new mongoose.Schema({
     email: { type: String, required: true },
-    profilePicUrl: { type: String, required: true },
+    imageUrl: { type: String, required: true },
+    googleId: { type: String, required: true },
+    name: { type: String, required: true },
+    givenName: { type: String, required: true },
+    familyName: { type: String, required: true },
+
 }, {
     versionKey: false,
     timestamps: true
