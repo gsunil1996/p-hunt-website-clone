@@ -39,8 +39,8 @@ npm start
 - `Signin Page`
 - `Product Page`
 - `Community Page`
-- `Tools page`
 - `Jobs page`
+- `Tools page`
 - `About page`
 
 ---
