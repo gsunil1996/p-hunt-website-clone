@@ -21,7 +21,6 @@ export default function FeedProduct({p}) {
   
     return (
         <>
-        <a className="achor-tag" href="https://www.producthunt.com/posts/grist-2">
           <div className="feedContainerProductsDiv" >
                    <div className="feedContainerProduct-detailDiv">
                        <div className="product-logo">
@@ -46,7 +45,6 @@ export default function FeedProduct({p}) {
                      <p className="voteNumber" style={{color:colour}}>{voted}</p>
                    </div>
              </div>  
-            </a>
         </>
     )
 }

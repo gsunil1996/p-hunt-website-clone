@@ -66,8 +66,7 @@ export function JobsCard() {
                 </button>
                 <SharePopup />
               </Modal>
-
-              <div className="share">APPLY</div>
+             <a href="https://breezy-land-f50.notion.site/Senior-Software-Engineer-9667ab285d1f43998ff896eb167c8955" target="_blank"> <div className="share">APPLY</div> </a>
             </div>
           </div>
         </div>
