@@ -1,0 +1,58 @@
+.mainFeedContainer{
+    height: 600px;
+    width: 45%;
+    /* border: 1px solid red; */
+    margin-left: 13%;
+}
+.feedContainerMainHeadingDiv{
+    height: 60px;
+    width: 100%;
+    /* border: 1px solid green; */
+     text-align: left;
+}
+.feedContainer_MainHeading{
+    font-weight: 550;
+    color: #21293C;
+    font-size: 24px;
+}
+.feedContainerFeaturedDropDownDiv{
+    height: 50px;
+    width: 100%;
+    /* border: 1px solid greenyellow; */
+    text-align: left;
+}
+.feedContainerFeatureButton{
+    width: 17%;
+    height: 30px;
+    align-items: center;
+    text-align: center;
+    background-color: #EEF2FF;
+    color: #005EF6;
+    font-weight: 600;
+    font-size: 14px;
+    border-radius: 12px;
+    padding-top: 1px;
+    border: none;
+    outline:none;
+    cursor: pointer;
+}
+
+.feature_dropdown_icon{
+    margin-bottom: -6px !important;
+    align-items: center;
+    display: none;
+}
+.feedContainerFeatureMenu{
+    height: 50px;
+    width: 16%;
+    border-radius: 5px;
+    margin-top: 5px;
+    background-color: white;
+    box-shadow: 0px 0px 1px 1px rgb(223, 223, 223);
+}
+.feedContainerFeatureMenu p{
+    margin-left: -40%;
+    margin-top: 5px;
+    cursor: pointer ;
+}
+

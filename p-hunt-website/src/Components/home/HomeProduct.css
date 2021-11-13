@@ -1,0 +1,9 @@
+.productPageMainContainer{
+    display: flex;
+    margin-top: 120px;
+}
+.hr{
+    margin-left: 2%;
+    background-color: #d9dbe2ad;
+    height: 2220px;
+}

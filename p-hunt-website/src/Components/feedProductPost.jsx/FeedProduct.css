@@ -1,0 +1,110 @@
+.feedContainerProductsDiv{
+    height: 120px;
+    width: 100%;
+    /* border: 1px solid rgb(243, 207, 5); */
+    display: flex;
+    margin-top: 20px;
+
+}
+.feedContainerProduct-detailDiv{
+   /* height: 90px; */
+   width: 82%;
+   /* border: 1px solid rgb(5, 5, 0); */
+   display: flex;
+}
+
+.product-logo{
+    height: 90px;
+    width: 24%;
+    /* border: 1px solid rgb(164, 6, 255); */
+    background-color: #e8f1ff;
+    z-index: -1;
+    border-radius: 5px;
+}
+.productLogoVideo{
+    height: 90px;
+    width: 100%;
+    border-radius: 5px;
+}
+.product-detailDiv{
+    height: 90px;
+    width: 100%;
+    /* border: 1px solid rgb(25, 240, 6); */
+    margin-left: 4%;
+    text-align: left;
+}
+.productNameDescDiv{
+    height: 70px;
+    width: 100%;
+    /* border: 1px solid rgb(255, 217, 2); */
+}
+.productName{
+    color: #667190;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+.productDesc{
+    color: #667190;
+    font-size: 13px;
+    /* margin-top: 0px; */
+}
+.productCommentDiv{
+    /* height: 25px; */
+    width: 100%;
+    /* border: 1px solid rgb(255, 2, 2); */
+    display: flex;
+    
+}
+.ModeCommentIcon{
+    height: 20px !important;
+    color: #667190;
+}
+.commentNumber{
+    margin-left: 1.5%;
+    margin-top: 2px;
+    font-size: 12px;
+    color: #667190;
+}
+.useableType{
+    margin-left: 5%;
+    font-size: 12px;
+    margin-top: 2px;
+    font-size: 12px;
+    color: #667190;
+}
+.dot{
+    margin-left: 5%;
+    margin-top : -5px;
+    font-size: 20px;
+    color: #667190;
+}
+.productType{
+    margin-left: 5%;
+    margin-top: 2px;
+    font-size: 12px;
+    color: #667190;
+}
+.feedContainerProduct-voteDiv{
+    height: 65px;
+    width: 9%;
+    margin-left: 6%;
+    border: 1px solid  #d9dbe2ad;
+    border-radius: 5px;
+    margin-top: 8px;
+}
+.ArrowDropUpIcon{
+    height: 60px !important;
+    width: 100% !important;
+    align-items: center;
+    margin-top: -10px;
+    color: #667190;
+}
+.voteNumber{
+   margin-top: -15px;
+   margin-left: 25%;
+   /* color: #667190; */
+   font-weight: 550;
+}
+.achor-tag{
+    text-decoration: none !important;
+}

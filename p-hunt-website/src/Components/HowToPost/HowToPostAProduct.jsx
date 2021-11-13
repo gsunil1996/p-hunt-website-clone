@@ -4,7 +4,7 @@ import styles from "./HowToPostAProduct.module.css"
 function HowToPostAProduct() {
 
     return (
-        <div>
+        <div className={styles.parent}>
 
             
             <div className={styles.grid1}>

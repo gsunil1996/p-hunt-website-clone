@@ -1,8 +1,13 @@
+.parent{
+    margin-top: 100px;
+}
+
 .grid1{
     display: grid;
     grid-template-columns: repeat(2, 40%);
     margin-left: 10%;
     grid-gap: 3%;
+   
 }
 .cat{
     width: 577.79px;
