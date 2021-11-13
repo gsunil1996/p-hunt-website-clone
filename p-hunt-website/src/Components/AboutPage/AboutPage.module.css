@@ -1,0 +1,223 @@
+.parent{
+    background-color: rgb(250,251,255);
+}
+.top{
+    font-size: 1.6rem;
+    color: rgb(33,41,60);
+    font-weight: 450;
+    margin-top: 150px;
+}
+.top > p{
+    margin-bottom: 0px;
+    margin-top: 0px;
+}
+.faq > p{
+    color: orangered;
+    font-weight: 300;
+    font-size: 1.3rem;
+}
+.flexing1, .flexing2{
+   display: grid;
+   grid-template-columns: repeat(2,45%);
+   grid-gap: 0%;
+   margin-left: 10%;
+}
+.flexing1 > div> img{
+    height: 20px;
+}
+.flexing1 > div > p, .flexing2 > div > p{
+    font-size: 1.3rem;
+    color: rgb(33,41,60);
+}
+.flexing1 > div > p:nth-child(1), .flexing2 > div > p:nth-child(1){
+    margin-bottom: 0px;
+}
+.flexing1 > div > p:nth-child(2){
+   margin-top: 0px;
+   margin-top: 10px;
+}
+.flexing2 > div > p:nth-child(2), .flexing2 > div > p:nth-child(3), .flexing2 > div > p:nth-child(4){
+   margin-top: 0px;
+   margin-top: 10px;
+   margin-bottom: 0px;
+}
+.flexing2{
+    margin-top: 30px;
+}
+.logo{
+    height: 25px;
+    margin-top: 20px;
+}
+.logo1{
+     height: 35px;
+    margin-top: 20px;
+}
+.team{
+    margin-top: 40px;
+    color: black;
+}
+.block{
+    display: flex;
+    gap: 5%;
+    margin-bottom: 50px;
+}
+.block > div {
+    text-align: left;
+}
+.block > div > img{
+  border-radius: 50%;
+  height: 60px;
+}
+.block > div > p:nth-child(1){
+   margin-bottom: 0px;
+   font-weight: 600;
+   color: rgb(44, 49, 61);
+   font-size: 14px;
+   margin-top: 0px;
+}
+.block > div > p:nth-child(2){
+   margin-bottom: 0px;
+   margin-top: 0px;
+   font-weight: 400;
+   color: grey;
+   font-size: 14px;
+}
+.block > div > p:nth-child(3){
+   margin-bottom: 0px;
+   margin-top: 0px;
+   font-weight: 450;
+   color: orangered;
+   font-size: 14px;
+}
+.griding{
+    display: grid;
+    grid-template-columns: repeat(3, 33%);
+    margin-left: 15%;
+    margin-top: 50px;
+}
+.griding2{
+    display: grid;
+    grid-template-columns: repeat(15, 5.5%);
+    margin-left: 18%;
+}
+
+.griding2 > img{
+    height: 40px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.flexing3 > img{
+ border-radius: 50%;
+ margin-left: 2%;
+ height: 40px;
+}
+.flexing4 > img:nth-child(1) {
+    width: 164px;
+    height: 69px;
+    margin-left: 4%;
+}
+.flexing4 > img:nth-child(2) {
+    width: 156px;
+    height: 43px;
+    margin-left: 4%;
+    margin-bottom: 20px;
+}
+
+.flexing5, .flexing6{
+    margin-top: 50px;
+}
+
+.flexing5 > img:nth-child(1){
+    width: 250px;
+    height: 27px;
+    margin-left: 4%;
+}
+.flexing5 > img:nth-child(2){
+    width: 232px;
+    height: 71px;
+    margin-left: 4%;
+    margin-bottom: -1%;
+}
+.flexing5 > img:nth-child(3){
+    width: 211px;
+    height: 42px;
+    margin-left: 4%;
+}
+
+.flexing6 > img:nth-child(1){
+    width: 209px;
+    height: 118px;
+    margin-left: 4%;
+}
+.flexing6 > img:nth-child(2){
+    width: 118px;
+    height: 117px;
+    margin-left: 4%;
+}
+.flexing6 > img:nth-child(3){
+    width: 189px;
+    height: 142px;
+    margin-left: 4%;
+}
+.flexing6 > img:nth-child(4){
+    width: 131px;
+    height: 72px;
+    margin-left: 4%;
+}
+.flexing7{
+    margin-top: 30px;
+}
+.flexing7 > img:nth-child(1){
+    width: 277px;
+    height: 33px;
+    margin-left: 4%;
+}
+.flexing7 > img:nth-child(2){
+    width: 165px;
+    height: 65px;
+    margin-left: 4%;
+    margin-bottom: -20px;
+}
+.flexing7 > img:nth-child(3){
+    width: 224px;
+    height: 29px;
+    margin-left: 4%;
+}
+.flexing8{
+    display: flex;
+     text-align: left;
+     margin-left: 18%;
+     margin-top: 50px;
+}
+.pLogo{
+    width: 443.44px;
+    height: 141.82;
+}
+.flexing8 > div > button{
+    background-color: orangered;
+    color: white;
+    height: 34px;
+    padding: 0 13px;
+    border-color: orangered;
+    border-radius: 5px;
+}
+.flexing8 > div > p:nth-child(2){
+    color: gray !important;
+    margin-bottom: 0px;
+}
+.flexing8 > div > p:nth-child(3){
+    color: gray !important;
+    margin-top: 0px;
+}
+.footer{
+    width: 80%;
+    border-top: 1px solid gainsboro;
+    margin-top: 50px !important;
+    padding-bottom: 40px;
+    margin: auto;
+    display: flex;
+    color: gray;
+    gap: 40%;
+    font-size: 13px;
+}

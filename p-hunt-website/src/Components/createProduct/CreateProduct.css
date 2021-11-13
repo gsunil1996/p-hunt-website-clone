@@ -1,0 +1,84 @@
+
+.createProductMainContainer{
+    height: 600px;
+    width: 100%;
+    /* border: 1px solid red; */
+   
+}
+.createProductTopDiv-green{
+    height: 50px;
+    width: 100%;
+    background-color: #00B37E;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    
+}
+.createProductTopDiv-green p{
+   color: white;
+   font-size: 13px;
+   margin-top: 15px;
+
+}
+.createProductTopDiv-green button{
+  text-decoration: none;
+  display: inline-block;
+  margin: 4px 2px;
+  cursor: pointer;
+  padding: 0px 10px 0px 10px;
+  text-align: center;
+  font-size: 12px;
+  height: 25px;
+  margin-left: 2%;
+  margin-top: 12px;
+  border-radius: 3px;
+  border: none;
+}
+.createProductMainHeadingDiv{
+    height: 40px;
+    width: 78%;
+    /* border: 1px solid rgb(0, 29, 14); */
+    margin-left: 11%;
+    margin-top: 40px;
+}
+.createProductMainHeadingDiv h1{
+  font-size: 32px;
+  color: #21293C;
+}
+.createProductOtherContaintDiv{
+    height: 100px;
+    width: 78%;
+    margin-top: 50px;
+    /* border: 1px solid rgb(8, 4, 245); */
+    margin-left: 11%;
+    text-align: center;
+}
+.createProductOtherContaint-heading{
+    font-size: 18px;
+    color: #21293C;
+    /* margin-left: 1%; */
+}
+.createProductOtherContaint-secondPara{
+    color: #21293C;
+    font-size: 12px;
+    margin-top: 5px;
+}
+.secondPara-span{
+    color: #F64900;
+    cursor: pointer;
+    margin-top: 5px;
+}
+.createProduct-Button{
+  text-decoration: none;
+  display: inline-block;
+  margin: 4px 2px;
+  cursor: pointer;
+  padding: 12px 15px 12px 15px;
+  text-align: center;
+  font-size: 14px;
+  margin-top: 12px;
+  border-radius: 5px;
+  border: none;
+  background-color:#F64900 ;
+  color: white;
+}

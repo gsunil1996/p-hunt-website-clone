@@ -1,0 +1,142 @@
+.parent{
+    margin-top: 100px;
+}
+
+.grid1{
+    display: grid;
+    grid-template-columns: repeat(2, 40%);
+    margin-left: 10%;
+    grid-gap: 3%;
+   
+}
+.cat{
+    width: 577.79px;
+    height: 400.13px;
+}
+.heading{
+    text-align: left;
+}
+
+.heading > p:nth-child(1){
+ font-size: 40px;
+ font-weight: bolder;
+ color: rgb(33,41,60);
+ margin-bottom: 0px;
+}
+.heading > p:nth-child(2){
+ font-size: 40px;
+ font-weight: bolder;
+ color: rgb(33,41,60);
+ margin-top: 0px;
+}
+
+.heading > p:nth-child(3), .heading > p:nth-child(4), .heading > p:nth-child(5), .heading > p:nth-child(6){
+ font-size: 20px;
+ font-weight: bolder;
+ color: rgb(33,41,60);
+ margin-top: 0px;
+ font-weight: 300;
+}
+
+.flex1{
+    margin-top: 150px;
+    display: flex;
+    text-align: left;
+    gap: 3%;
+    margin-left: 10%;
+}
+
+.flex2{
+    margin-top: 100px;
+    display: flex;
+    text-align: left;
+    gap: 3%;
+    margin-left: 10%;
+}
+
+.flex1 > div > img, .flex2 > div > img{
+    height: 80px;
+    width: 80px;
+}
+
+.text > p:nth-child(1), .text1 > p:nth-child(1){
+ font-size: 26px;
+ font-weight: 700;
+ color: rgb(33,41,60);
+ margin-top: 15px;
+}
+
+.text > p, .text1 > p, .text2 > p, .text3 > p, .text4 > p, .text5 > p, .text6 > p, .text7 > p, .text8 > p, .text9 > p, .text10 > p, .text11 > p {
+font-size: 20px;
+ font-weight: bolder;
+ color: rgb(33,41,60);
+ margin-top: 0px;
+ font-weight: 300;
+ margin-top: 5px;
+ margin-bottom: 0px;
+}
+
+.bottom > p:nth-child(2){
+font-size: 20px;
+ font-weight: bolder;
+ color: rgb(33,41,60);
+ font-weight: 300;
+}
+
+.text{
+    margin-top: -20px;
+}
+
+a{
+    text-decoration: none;
+    color: orangered;
+}
+
+.text > P:nth-child(2), .text > P:nth-child(4), .text > P:nth-child(7), .text > P:nth-child(10), .text1 > P:nth-child(4), .text2 > p:nth-child(3), .text3 > p:nth-child(5), .text3 > p:nth-child(6), .text5 > p:nth-child(3), .text6 > P:nth-child(2), .text6 > P:nth-child(6), .text8 > P:nth-child(5), .text9 > P:nth-child(5), .text9 > P:nth-child(9), .text11 > P:nth-child(3){
+    margin-top: 30px;
+}
+
+.text1 > p:nth-child(1), .text2 > p:nth-child(1), .text3 > p:nth-child(1), .text4 > p:nth-child(1), .text5 > p:nth-child(1), .text6 > p:nth-child(1), .text7 > p:nth-child(1), .text8 > p:nth-child(1), .text9 > p:nth-child(1), .text10 > p:nth-child(1), .text11 > p:nth-child(1) {
+font-size: 26px;
+ font-weight: 700;
+ color: rgb(33,41,60);
+ margin-top: -2px;
+ margin-bottom: 25px;
+}
+
+.bottom > p:nth-child(1){
+font-size: 26px;
+ font-weight: 700;
+ color: rgb(33,41,60);
+ margin-top: 50px;
+ margin-bottom: 0px;
+}
+
+.bottom > button{
+    background-color: orangered;
+    color: white;
+    height: 34px;
+    border-color: orangered;
+    border-radius: 5px;
+    font-size: 11px;
+}
+
+.border{
+    width: 800px;
+    height: 6px;
+    margin-top: 80px;
+}
+.bottom{
+    padding-bottom: 30px;
+}
+.footer{
+    width: 80%;
+    border-top: 1px solid gainsboro;
+    margin-top: 50px !important;
+    padding-bottom: 40px;
+    margin: auto;
+    display: flex;
+    color: gray;
+    gap: 40%;
+    font-size: 13px;
+}
