@@ -51,7 +51,7 @@ npm start
 - `CSS`
 - `Javascript`
 - `Express`
-- `MongoDB`
+- `MongoDb`
 
 ---
 
