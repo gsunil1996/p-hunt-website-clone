@@ -24,7 +24,7 @@ export default function FeedProduct({p}) {
           <div className="feedContainerProductsDiv" >
                    <div className="feedContainerProduct-detailDiv">
                        <div className="product-logo">
-                         <img className="productLogoVideo" src={p.img} />
+                         <img className="productLogoVideo" src={p.img.length>40 ? p.img:`https://drive.google.com/uc?export=view&id=${p.img}`} alt="product"/>
                        </div>
                        <div className="product-detailDiv">
                            <div className="productNameDescDiv">

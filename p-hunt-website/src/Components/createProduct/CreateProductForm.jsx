@@ -2,78 +2,42 @@ import React from "react";
 import "./CreateProductForm.css";
 import SearchIcon from "@mui/icons-material/Search";
 import FileUploadIcon from "@mui/icons-material/FileUpload";
-import { useState, useRef } from "react";
+import { useState } from "react";
 import axios from "axios";
-import { Link } from "react-router-dom";
 
 
-const init = {
-  name: "",
-  monetize: "",
-  category: "",
-  description: "",
-  link: "",
-  product_file_link:""
-};
 export default function CreateProductForm() {
-  const [formData, setData] = useState(init);
-  const uploadRef = useRef(null);
-  const handleChange = (e) => {
-    const { name, value, type, checked } = e.target;
-    console.log("ab",value)
-    setData({ ...formData, [name]: type === "checkbox" ? checked : value });
-  };
+  const [name, setName] = useState("");
+  const [monetize, setMone] = useState("");
+  const [category, setCat] = useState("");
+  const [desc, setDesc] = useState("");
+  const [link, setLink] = useState("");
+  const [file, setFile] = useState("");
+
 //console.log(formData)
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-
-     formData.product_file_link = uploadRef.current.files[0];
-     const pro_img = URL.createObjectURL(formData.product_file_link)
-     formData.product_file_link= pro_img;
-
-    const {
-     name,
-     monetize,
-     category,
-     description,
-     link,
-     product_file_link,
-      } = formData;
-
-    fetch(
-      "http://localhost:2345/product",{
-        method: "POST",
-        headers: {
-        "Content-Type":"application/json",
-        },
-      body:JSON.stringify({
-      name,
-      monetize,
-      category,
-      description,
-      link,
-      product_file_link
-     }),
+    const data = new FormData();
+    data.append("name", name)
+    data.append("file", file)
+    data.append("monetize", monetize)
+    data.append("category", category)
+    data.append("desc", desc)
+    data.append("link", link)
     
-      
-
-  })
-      .then(function (response) {
-          console.log("res",response);
-      })
-      .catch(function (error) {
-          console.log("error",error);
-      });
-    
-    setData(init);
-  };
+    await axios.post("http://localhost:2345/product", data)
+      .then(res => {
+      alert("Your Product has been Posted")
+    })
+    .catch(err => console.log(err));
+};
 
   return (
     <>
       <div className="creatProductFromMainDiv">
         <div className="createProductTopDiv-orange">
           <div className="productTopLogoDiv">
-            <img src="https://downloads.intercomcdn.com/i/o/8730/79a974f9c42d362ec2818b1c/ph-help3.png"></img>
+            <img src="https://downloads.intercomcdn.com/i/o/8730/79a974f9c42d362ec2818b1c/ph-help3.png" alt="logo"></img>
             <p>Go to Product Hunt</p>
           </div>
           <div className="inputDiv">
@@ -94,7 +58,7 @@ export default function CreateProductForm() {
                     type="text"
                     placeholder="Name of the product"
                     name="name"
-                    onChange={handleChange}
+                    onChange={(e)=>setName(e.target.value)}
                   />
                   <br />
                   <input
@@ -102,7 +66,7 @@ export default function CreateProductForm() {
                     type="text"
                     placeholder="Category"
                     name="category"
-                    onChange={handleChange}
+                    onChange={(e)=>setCat(e.target.value)}
                   />
                   <br />
                   <input
@@ -110,7 +74,7 @@ export default function CreateProductForm() {
                     type="text"
                     placeholder="Link(optional)"
                     name="link"
-                    onChange={handleChange}
+                    onChange={(e)=>setLink(e.target.value)}
                   />
                 </div>
                 <div className="createProductform-fieldDiv-2">
@@ -119,7 +83,7 @@ export default function CreateProductForm() {
                     type="text"
                     placeholder="Monetization"
                     name="monetize"
-                    onChange={handleChange}
+                    onChange={(e)=>setMone(e.target.value)}
                   />
                   <br />
                   <input
@@ -127,7 +91,7 @@ export default function CreateProductForm() {
                     type="text"
                     placeholder="description......"
                     name="description"
-                    onChange={handleChange}
+                    onChange={(e)=>setDesc(e.target.value)}
                   />
                   <br />
 
@@ -135,10 +99,11 @@ export default function CreateProductForm() {
                     <FileUploadIcon className="FileUploadIcon" />
                     <input
                       className="uploadImg-input"
-                      onChange={handleChange}
-                      ref={uploadRef}
+                      onChange={event => {
+                                const file = event.target.files[0];
+                                setFile(file);
+                            }}
                       type="file"
-                      name="product_file_link"
                     />
                   </div>
                   {/* <span className="uploadImg-span">Upload Img</span> */}
